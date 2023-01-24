@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "imageUrl": "sfjbhdf",
+      "description": "dughetg",
+      "body": "dugehtjy",
+      "new_cat": "Education",
+      "news_ref": 866491988,
+      "id": 1
+    },
+    {
+      "imageUrl": "hghfg",
+      "description": "dgyfg",
+      "body": "dgyufr",
+      "new_cat": "Education",
+      "news_ref": 896553010,
+      "id": 2
+    },
+    {
+      "imageUrl": "yfe",
+      "description": "ggfeh",
+      "body": "sdugihrrt",
+      "new_cat": "Politics",
+      "news_ref": 555089059,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
