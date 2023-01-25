@@ -1,13 +1,15 @@
-import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import Newscard from '../components/Newscard';
+import Footer from '../components/Footer';
+import Banner from '../components/Banner';
+// import Newscard from '../components/Newscard';
 
 export default function Home() { 
   return (
     <>
     <Navbar/>
-    <Newscard/>
-    <Footer/>
+    <Banner/>
+    {/* <Newscard/>*/}
+    <Footer/> 
     </>
   )
 }

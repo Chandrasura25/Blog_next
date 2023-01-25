@@ -1,37 +1,35 @@
-import React from 'react'
+import React,{useRef} from 'react'
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
+    const onHead = useRef()
+    if (typeof window !== "undefined") {  
+        window.addEventListener("scroll", function () { 
+            // const header = document.querySelector(".header"); 
+            onHead.current.classList.toggle('sticky', window.scrollY > 0)
+            console.log(onHead.current)
+        });
+    }
+    const toggleMenu = () => {
+        const menuToggle = document.querySelector('.menuToggle') 
+        const navigation = document.querySelector('.navigation') 
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
     return (
         <>
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <select name="" className='form-select' id="">
-                                <option value="Category">Category</option>
-                                <option value="Education">Education</option>
-                                <option value="Politics">Politics</option>
-                            </select>
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
+            <header className={styles.header} ref={onHead}>
+                <a href="#" className={styles.logo}>Blog<span>On</span></a>
+                <div className={styles.menuToggle} onClick={toggleMenu}></div>
+                <ul className={styles.navigation}>
+                    <li><a href="#banner" onClick={toggleMenu}>Home</a></li>
+                    <li><a href="#about" onClick={toggleMenu}>About</a></li>
+                    <li><a href="#menu" onClick={toggleMenu}>News</a></li>
+                    <li><a href="#expert" onClick={toggleMenu}>Expert</a></li>
+                    <li><a href="#testimonial" onClick={toggleMenu}>Testimonials</a></li>
+                    <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+                </ul>
+            </header>
         </>
     )
 }

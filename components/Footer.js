@@ -1,13 +1,11 @@
 import React from 'react'
-
+import styles from '../styles/Footer.module.css'
 const Footer = () => {
   return (
     <>
-<footer class="text-center text-lg-start bg-light text-muted">
-  <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
-    © 2021 Copyright
-  </div>
-</footer>
+      <div className={styles.copyrightText}>
+        <p>Copyright 2023 <a href="#">Chandrasura</a>. All Right Reserved</p>
+      </div>
     </>
   )
 }

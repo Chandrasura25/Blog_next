@@ -1,9 +1,8 @@
 import '../styles/globals.css';
 import 'font-awesome/css/font-awesome.css'
 import Head from 'next/head';
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import '@mui/material'
-// import Navbar from '../components/Navbar';
 
 function MyApp({ Component, pageProps }) {
   return (
