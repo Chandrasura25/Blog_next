@@ -1,14 +1,16 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
-// import Newscard from '../components/Newscard';
+import CardBanner from '../components/CardBanner';
+import Contact from '../components/Contact';
 
 export default function Home() { 
   return (
     <>
     <Navbar/>
     <Banner/>
-    {/* <Newscard/>*/}
+    <CardBanner/>
+    <Contact/>
     <Footer/> 
     </>
   )

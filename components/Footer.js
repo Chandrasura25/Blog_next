@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className={styles.copyrightText}>
-        <p>Copyright 2023 <a href="#">Chandrasura</a>. All Right Reserved</p>
+        <p>Copyright 2023 <a href="#">Chandrasura</a>. All Right Reserved.</p>
       </div>
     </>
   )

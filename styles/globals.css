@@ -21,10 +21,59 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.5s;
+  border: none;
+  outline: none;
 }
 .btn:hover {
   letter-spacing: 6px;
 }
-section{
+section {
   padding: 100px;
+}
+
+#whit h2,
+#whit p {
+  color: #fff;
+}
+#signup::before{
+  left: 20px;
+  width: 15px;
+  height: 15px;
+}
+#signup{
+  bottom: 150px;
+  right: -120px;
+  width: 80px;
+  height: 80px;
+  border-radius: 49% 51% 52% 48% / 63% 59% 41% 37%;
+  background: #01b4ff;
+  box-shadow: inset 10px 10px 10px rgba(1, 180, 255, 0.05),15px 25px 10px rgba(1, 180, 255, 0.1), 15px 20px 20px rgba(1, 180, 255, 0.1),inset -10px -10px 15px rgba(255,255,255,0.5);
+}
+@media (max-width: 991px) {
+  section {
+    padding: 20px;
+  }
+  #navigation.active {
+    width: 100%;
+    height: calc(100% - 58px);
+    position: fixed;
+    top: 58px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+  #menuToggle.active {
+    background: url(../assets/images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+#signup{
+  bottom: 150px;
+  left: 20px;
+}
 }
