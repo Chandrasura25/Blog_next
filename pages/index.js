@@ -3,15 +3,19 @@ import Footer from '../components/Footer';
 import Banner from '../components/Banner';
 import CardBanner from '../components/CardBanner';
 import Contact from '../components/Contact';
+import Head from 'next/head'
 
-export default function Home() { 
+export default function Home() {
   return (
     <>
-    <Navbar/>
-    <Banner/>
-    <CardBanner/>
-    <Contact/>
-    <Footer/> 
+      <Head>
+        <title>BlogOn</title>
+      </Head>
+      <Navbar />
+      <Banner />
+      <CardBanner />
+      <Contact />
+      <Footer />
     </>
   )
 }

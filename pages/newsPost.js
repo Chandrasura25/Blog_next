@@ -4,6 +4,7 @@ import { ClipLoader } from 'react-spinners';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from '../styles/newsPost.module.css';
+import Head from 'next/head'
 
 const NewsPost = () => {
     const [imageUrl, setimageUrl] = useState('')
@@ -37,6 +38,9 @@ const NewsPost = () => {
     }
     return (
         <>
+        <Head>
+            <title>Post A News</title>
+        </Head>
             <div className={styles.body}>
                 <div className={styles.container}>
                     <div className={styles.drop}>
@@ -67,7 +71,7 @@ const NewsPost = () => {
                             </div>
                         </div>
                     </div>
-                    <a href="/contact" className={styles.btns}>Contact</a>
+                    <a href="/newsFeed" className={styles.btns}>News Feed</a>
                     <a href="/" className={styles.btns} id="signup">Home</a>
                 </div>
             </div>

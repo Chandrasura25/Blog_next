@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className={styles.menuToggle} id='menuToggle' onClick={toggleMenu}></div>
                 <ul className={styles.navigation} id='navigation'>
                     <li><a href="#banner" onClick={toggleMenu}>Home</a></li>
-                    <li><a href="#" onClick={toggleMenu}>About</a></li>
+                    <li><a href="/newsFeed" onClick={toggleMenu}>News Feed</a></li>
                     <li><a href="#testimonial" onClick={toggleMenu}>News</a></li>
                     <li><a href="/newsPost" onClick={toggleMenu}>Post News</a></li>
                     <li><a href="#" onClick={toggleMenu}>Testimonials</a></li>
