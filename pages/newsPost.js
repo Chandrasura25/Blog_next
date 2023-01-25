@@ -21,7 +21,6 @@ const NewsPost = () => {
             const details = { imageUrl, description, body, new_cat, news_ref }
             axios.post(url, details).then((res) => {
                 if (res.data) {
-                    console.log(res);
                     setloader(false)
                     setbody('')
                     setdescription('')
