@@ -5,6 +5,8 @@
   box-sizing: border-box;
   font-family: "Poppins" sans-serif;
   scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
 }
 p {
   font-weight: 300;
@@ -30,7 +32,6 @@ p {
 section {
   padding: 100px;
 }
-
 #whit h2,
 #whit p {
   color: #fff;

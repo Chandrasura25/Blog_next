@@ -8,7 +8,7 @@
 }
 .testimonials .content .box {
   width: 340px;
-  margin: 20px;
+  margin: 15px;
   padding: 40px;
   border: 15px solid #fff;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
@@ -37,12 +37,6 @@
   color: #ff0157;
   font-size: 1em;
   font-weight: 600;
-}
-.row {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 .titleText {
   color: #111;

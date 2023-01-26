@@ -12,7 +12,7 @@ const CardBanner = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div className={styles.content}>
-                    {[1, 2, 3, 4, 5,6].map((val, i) => (
+                    {[1, 2, 3, 4, 5,6].map((val, i) => ( 
                         <div className={styles.box} key={i}>
                             <div className={styles.imgBx}>
                                 <Image src={img} alt='img' style={{ width: "100%" }} />
