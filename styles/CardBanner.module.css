@@ -8,6 +8,7 @@
 }
 .testimonials .content .box {
   width: 340px;
+  height: 350px;
   margin: 15px;
   padding: 40px;
   border: 15px solid #fff;
@@ -32,6 +33,11 @@
   color: #666;
   font-style: italic;
 }
+.testimonials .content .box .text p:nth-child(1) {
+  color: #333;
+  font-style: normal;
+  text-transform: uppercase;
+}
 .testimonials .content .box .text h3 {
   margin-top: 20px;
   color: #ff0157;
@@ -43,10 +49,14 @@
   font-size: 2em;
   font-weight: 300;
 }
-.titleText span {
+.titleText span,.timeago {
   color: #ff0157;
   font-weight: 700;
   font-size: 1.5em;
+}
+.timeago{
+  display: block;
+  font-size: 1em;
 }
 .title {
   width: 100%;

@@ -19,7 +19,7 @@ const NewsPost = () => {
         const new_cat = cat_ref.current.value;
         const url = 'http://localhost:5000/posts'
         // let news_ref = Math.floor(Math.random() * 1000000000)
-        let news_ref = crypto.randomUUID;
+        const news_ref = crypto.randomUUID();
         if (imageUrl && description && body && new_cat) {
             setloader(true)
             const details = { imageUrl, description, body, new_cat, news_ref,created_at }
@@ -68,8 +68,8 @@ const NewsPost = () => {
                                 <div className={styles.inputBox}>
                                     <textarea name="" id="" onChange={(e) => setbody(e.target.value)} value={body} className='form-control' placeholder='Type the news body here' style={{ resize: 'none' }}></textarea>
                                 </div>
-                                <div className={styles.inputBox}>
                                     <ClipLoader loading={loader} color='blue' size={50} />
+                                <div className={styles.inputBox}>
                                     <input type="submit" name="" value='Add News' id="" onClick={btnSend} />
                                 </div>
                             </div>
@@ -84,8 +84,3 @@ const NewsPost = () => {
 }
 
 export default NewsPost
-NewsPost.getLayout = function PageLayout(page){
-    return <>
-    {page}
-    </>
-  }

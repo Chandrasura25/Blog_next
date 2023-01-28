@@ -1,10 +1,7 @@
-import React from 'react'
-import styles from '../styles/CardBanner.module.css'
-import img from '../assets/images/1.jpg'
-import Image from 'next/image'
-import ReactReadMoreReadLess from "react-read-more-read-less";
-import TimeAgo from 'timeago-react';
-import useSWR from 'swr'
+import React from 'react';
+import useSWR from 'swr';
+import Card from './Card';
+import styles from '../styles/CardBanner.module.css';
 const CardBanner = () => {
     const { data, error, loading } = useSWR("http://localhost:5000/posts")
     return (
@@ -14,27 +11,16 @@ const CardBanner = () => {
                     <h2 className={styles.titleText}>Our <span>N</span>ews  Content</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
+                <h2 className={styles.titleText}>Latest <span>N</span>ews  Content</h2>
                 <div className={styles.content}>
-                    {data?.map((val, i) => (
-                        <div className={styles.box} key={i}>
-                            <div className={styles.imgBx}>
-                                <Image src={img} alt='img' style={{ width: "100%" }} />
-                            </div>
-                            <div className={styles.text}>
-                                <p><ReactReadMoreReadLess
-                                    charLimit={200}
-                                    readMoreText={""}
-                                    readLessText={""}
-                                >
-                                    {val.description}
-                                </ReactReadMoreReadLess></p>
-
-                                <button className='btn'><a href={`/newsFeed?desc=${val.description}`}>Read More </a></button>
-                                <span> <TimeAgo
-                                    datetime={val.created_at}
-                                /></span>
-                            </div>
-                        </div>
+                    {data?.reverse().slice(0, 6).map((val, i) => (
+                        <Card val={val} i={i} />
+                    ))}
+                </div>
+                <h2 className={styles.titleText}>Available <span>N</span>ews  Content</h2>
+                <div className={styles.content}>
+                    {data?.slice(0, 6).map((val, i) => (
+                        <Card val={val} i={i} />
                     ))}
 
                 </div>
