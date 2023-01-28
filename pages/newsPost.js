@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from '../styles/newsPost.module.css';
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 
 const NewsPost = () => {
     const [imageUrl, setimageUrl] = useState('')
@@ -12,14 +13,16 @@ const NewsPost = () => {
     const [body, setbody] = useState('')
     const [loader, setloader] = useState(false)
     const cat_ref = useRef();
-
+   const router = useRouter()
     const btnSend = () => {
+        let created_at=new Date().toLocaleString()
         const new_cat = cat_ref.current.value;
         const url = 'http://localhost:5000/posts'
-        let news_ref = Math.floor(Math.random() * 1000000000)
+        // let news_ref = Math.floor(Math.random() * 1000000000)
+        let news_ref = crypto.randomUUID;
         if (imageUrl && description && body && new_cat) {
             setloader(true)
-            const details = { imageUrl, description, body, new_cat, news_ref }
+            const details = { imageUrl, description, body, new_cat, news_ref,created_at }
             axios.post(url, details).then((res) => {
                 if (res.data) {
                     setloader(false)
@@ -27,6 +30,7 @@ const NewsPost = () => {
                     setdescription('')
                     setimageUrl('')
                     toast("Sent Successfully");
+                    router.push('/newsTable')
                 }
             }).catch((err) => {
                 console.log(err)
@@ -80,3 +84,8 @@ const NewsPost = () => {
 }
 
 export default NewsPost
+NewsPost.getLayout = function PageLayout(page){
+    return <>
+    {page}
+    </>
+  }

@@ -1,28 +1,12 @@
 {
   "posts": [
     {
-      "imageUrl": "sfjbhdf",
-      "description": "dughetg",
-      "body": "dugehtjy",
+      "imageUrl": "https://unsplash.com/photos/6egdNN_3k3I",
+      "description": "hdwjfdmsffcbvxvxnbxcvvxbvbfbbv",
+      "body": "egjfdkjghdfhkghd",
       "new_cat": "Education",
-      "news_ref": 866491988,
+      "created_at": "1/26/2023, 3:39:17 PM",
       "id": 1
-    },
-    {
-      "imageUrl": "hghfg",
-      "description": "dgyfg",
-      "body": "dgyufr",
-      "new_cat": "Education",
-      "news_ref": 896553010,
-      "id": 2
-    },
-    {
-      "imageUrl": "yfe",
-      "description": "ggfeh",
-      "body": "sdugihrrt",
-      "new_cat": "Politics",
-      "news_ref": 555089059,
-      "id": 3
     }
   ],
   "comments": [

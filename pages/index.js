@@ -19,3 +19,8 @@ export default function Home() {
     </>
   )
 }
+Home.getLayout = function PageLayout(page){
+  return <>
+  {page}
+  </>
+}

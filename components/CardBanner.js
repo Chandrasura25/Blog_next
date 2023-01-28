@@ -2,8 +2,11 @@ import React from 'react'
 import styles from '../styles/CardBanner.module.css'
 import img from '../assets/images/1.jpg'
 import Image from 'next/image'
-
+import ReactReadMoreReadLess from "react-read-more-read-less";
+import TimeAgo from 'timeago-react';
+import useSWR from 'swr'
 const CardBanner = () => {
+    const { data, error, loading } = useSWR("http://localhost:5000/posts")
     return (
         <>
             <section className={styles.testimonials} id="testimonial">
@@ -12,14 +15,24 @@ const CardBanner = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div className={styles.content}>
-                    {[1, 2, 3, 4, 5,6].map((val, i) => ( 
+                    {data?.map((val, i) => (
                         <div className={styles.box} key={i}>
                             <div className={styles.imgBx}>
                                 <Image src={img} alt='img' style={{ width: "100%" }} />
                             </div>
                             <div className={styles.text}>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ad id cumque blanditiis! Doloribus officia debitis, illum distinctio facilis ducimus, ipsa harum ea dicta voluptas consequatur ullam, porro nemo delectus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, odio. Lorem, ipsum dolor.</p>
-                                <button className='btn'>Read More</button>
+                                <p><ReactReadMoreReadLess
+                                    charLimit={200}
+                                    readMoreText={""}
+                                    readLessText={""}
+                                >
+                                    {val.description}
+                                </ReactReadMoreReadLess></p>
+
+                                <button className='btn'><a href={`/newsFeed?desc=${val.description}`}>Read More </a></button>
+                                <span> <TimeAgo
+                                    datetime={val.created_at}
+                                /></span>
                             </div>
                         </div>
                     ))}

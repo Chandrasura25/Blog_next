@@ -25,3 +25,8 @@ const PageNotFound = () => {
 }
 
 export default PageNotFound
+PageNotFound.getLayout = function PageLayout(page){
+  return <>
+  {page}
+  </>
+}
