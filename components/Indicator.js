@@ -12,12 +12,12 @@ const Indicator = () => {
             <div className={styles.navigation} ref={navigation} id='navigate'>
                 <div className={styles.toggle} onClick={toggling} ref={toggle} id='togg'><span></span></div>
                 <ul>
-                    <li style={{"--i":"0"}}><a href="#">Home</a></li>
-                    <li style={{"--i":"1"}}><a href="#">About</a></li>
+                    <li style={{"--i":"0"}}><a href="/">Home</a></li>
+                    <li style={{"--i":"1"}}><a href="/newsPost">Post News</a></li>
                     <li style={{"--i":"2"}}><a href="#">Services</a></li>
                     <li style={{"--i":"3"}}><a href="#">Work</a></li>
                     <li style={{"--i":"4"}}><a href="#">Team</a></li>
-                    <li style={{"--i":"5"}}><a href="#">Contact</a></li>
+                    <li style={{"--i":"5"}}><a href="/">Contact</a></li>
                 </ul>
             </div>
         </>
