@@ -50,6 +50,22 @@ section {
   background: #01b4ff;
   box-shadow: inset 10px 10px 10px rgba(1, 180, 255, 0.05),15px 25px 10px rgba(1, 180, 255, 0.1), 15px 20px 20px rgba(1, 180, 255, 0.1),inset -10px -10px 15px rgba(255,255,255,0.5);
 }
+#navigate.active ul li{
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+}
+#togg.active::before{
+  content: 'Close';
+}
+#togg.active span::before{
+  transform: rotate(225deg);
+  top: 24px;
+}
+#togg.active span::after{
+  transform: rotate(135deg);
+  bottom: 24px;
+}
 @media (max-width: 991px) {
   section {
     padding: 20px;

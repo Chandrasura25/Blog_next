@@ -1,114 +1,82 @@
 .navigation{
-    width: 400px;
-    height: 60px;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    height: 20px;
+    width: 250px;
+    z-index: 10;
+    right: 20px;
 }
-.navigation ul{
-    display: flex;
-    width: 350px;
-}
-.navigation ul li{
+.toggle{
     position: relative;
-    list-style: none;
-    width: 70px;
-    height: 60px;
-    z-index: 2;
-}
-.navigation ul li a{
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.navigation ul li a .icon{
-    position: relative;
-    display: block;
-    width: 55px;
-    height: 55px;
-    line-height:65px; 
-    font-size: 1.5em;
-    text-align:center;
-    transition:0.5s;
-    color: var(--clr);
-    border-radius: 50%;
-    transition: .5s;
-    transition-delay: 0s;
-}
-.navigation ul li.active a .icon{
-    transform: translateY(-27px);
-    color: #fff;
-    background: var(--clr);
-    transition-delay: 0.25s;
-}
-.navigation ul li a .icon::before{
-    content: '';
-    position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: var(--clr);
-    border-radius: 50%;
-    filter: blur(5px);
-    opacity: 0;
-    transition: .5s;
-    transition-delay: 0s;
-}
-.navigation ul li.active a .icon::before{
-    opacity: .5;
-    transition-delay: .25s;
-}
-.indicator{
-    position: absolute;
-    top: -35px;
-    width: 70px;
-    height: 70px;
+    height: 50px;
     background: #fff;
-    border-radius: 50%;
-    z-index: 1;
-    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ff216d;
+    padding: 5px 20px;
+    transition: .5s;
 }
-.indicator::before{
+.toggle::before{
+    content: 'Menu';
+    margin-right: 10px;
+}
+.toggle span{
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+.toggle span::before{
     content: '';
     position: absolute;
-    top: 5px;
-    left: -28px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: transparent;
-    box-shadow: 15px 18px #fff;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff216d;
+    transition: .5s;
 }
-.indicator::after{
+.toggle span::after{
     content: '';
     position: absolute;
-    top: 5px;
-    right: -28px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: transparent;
-    box-shadow: -15px 18px #fff;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff216d;
+    transition: .5s;
 }
-.navigation ul li:nth-child(1).active ~ .indicator{
-    transform: translateX(calc(70px * 0));
+.navigation ul{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
-.navigation ul li:nth-child(2).active ~ .indicator{
-    transform: translateX(calc(70px * 1));
+ .navigation ul li{
+    position: relative;
+    list-style: none;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition-delay: calc(0.1s * var(--i));
 }
-.navigation ul li:nth-child(3).active ~ .indicator{
-    transform: translateX(calc(70px * 2));
+.navigation ul li a{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    background: #fff;
+    color: #333;
+    transition: .5s;
 }
-.navigation ul li:nth-child(4).active ~ .indicator{
-    transform: translateX(calc(70px * 3));
-}
-.navigation ul li:nth-child(5).active ~ .indicator{
-    transform: translateX(calc(70px * 4));
-}
+.navigation ul li a:hover{
+    background: #f6f6f6;
+    color: #FF216d;
+    transition: 0s;
+} 
