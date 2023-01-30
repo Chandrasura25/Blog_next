@@ -1,42 +1,47 @@
-.containerFluid{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: #111;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.containerFluid {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: #111;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.containerFluid::before{
-	content: '';
-	position: absolute;
-	right: 0;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    background:#ff0157;
-    transform-origin: top;
-    transform: skewX(-25deg);
-    z-index: 1;
+.containerFluid::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: #ff0157;
+  transform-origin: top;
+  transform: skewX(-25deg);
 }
-.section header{
-    position: absolute;
-    top: 0;
-	width: 100%;
-    left: 0;
-    padding: 40px 100px;
-    z-index: 1;
-    display: flex;
-	justify-content: space-between;
-    transition: .5s;
+.section header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 40px 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
 }
-.section header .logo{
-    color: #fff;
-    font-weight: 700;
-    font-size: 2em;
-    text-decoration: none;
+.section header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
 }
-.section header .logo span{
-    color: #ff0157;
+.section header .logo span {
+  color: #ff0157;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transform: translateY(-20%);
 }

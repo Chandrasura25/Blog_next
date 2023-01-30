@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../styles/CardBanner.module.css'
-import img from '../assets/images/1.jpg'
 import Image from 'next/image'
 import ReactReadMoreReadLess from "react-read-more-read-less";
 import TimeAgo from 'timeago-react';
@@ -10,7 +9,7 @@ const Card = ({val,i}) => {
         <>
             <div className={styles.box} key={i}>
                 <div className={styles.imgBx}>
-                    <Image src={img} alt='img' style={{ width: "100%" }} />
+                    <Image src={val.imageUrl} alt='img' width="300" height={300} blurDataURL={val.imageUrl} placeholder='blur' />
                 </div>
                 <div className={styles.text}>
                     <p><ReactReadMoreReadLess

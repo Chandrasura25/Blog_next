@@ -3,9 +3,9 @@ import { RingLoader } from 'react-spinners'
 import useSWR from 'swr';
 import Head from 'next/head'
 import styles from '../styles/Table.module.css'
+import ReactReadMoreReadLess from "react-read-more-read-less";
 const NewsTable = () => {
     const { data, error, loading } = useSWR("http://localhost:5000/posts")
-
     if (!data) {
         return (
             <div className={styles.loader}>
@@ -35,10 +35,15 @@ const NewsTable = () => {
                                     </div>
                                     <div className={styles.details}>
                                         <h3>{val.description}</h3>
-                                        <p>{val.body}</p>
-                                        <a href="#">View Details</a>
+                                        <p><ReactReadMoreReadLess
+                                            charLimit={200}
+                                            readMoreText={""}
+                                            readLessText={""}
+                                        >
+                                            {val.body}
+                                        </ReactReadMoreReadLess></p>
+                                        <a href={`/newsFeed?desc=${val.description}`}>View Details</a>
                                     </div>
-                                    <div style="clear: both;"></div>
                                 </li>
                             ))
                         }

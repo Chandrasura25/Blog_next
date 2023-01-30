@@ -9,7 +9,7 @@
 .section{
 	width: 100%;
 	min-height: 100vh;
-	background: #ffff;
+	background: url(../assets/images/1.jpg);
 	background-size: cover;
 }
 .section .leftBox{
@@ -43,8 +43,8 @@
 }
 .section .events ul{
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	/* top: 50%; */
+	transform: translateY(-20%);
 	padding: 40px;
 }
 .section .events ul li{

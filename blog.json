@@ -1,13 +1,22 @@
 {
   "posts": [
     {
-      "imageUrl": "the fhddd",
+      "imageUrl": "https://images.unsplash.com/photo-1674796941974-9120fdf15205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
       "description": "the word of advise",
       "body": "the end of thee sing song is almost over, learn to make judicious use of time before it's too late",
       "new_cat": "Education",
       "news_ref": "16eb3053-c31f-4817-9c34-9d080c75af7e",
       "created_at": "1/28/2023, 12:28:34 PM",
       "id": 1
+    },
+    {
+      "imageUrl": "https://images.unsplash.com/photo-1674909073929-876e3427c43c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=80",
+      "description": "Pain",
+      "body": "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.",
+      "new_cat": "Animals",
+      "news_ref": "a719cb45-cb8c-4cfa-9dc9-dffda63edb7e",
+      "created_at": "1/30/2023, 5:47:12 AM",
+      "id": 2
     }
   ],
   "comments": [

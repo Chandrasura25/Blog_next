@@ -60,6 +60,9 @@ const NewsPost = () => {
                                         <option value="Category">Category</option>
                                         <option value="Education">Education</option>
                                         <option value="Politics">Politics</option>
+                                        <option value="Animals">Animals</option>
+                                        <option value="Decorations">Decorations</option>
+                                        <option value="Flowers">Flowers</option>
                                     </select>
                                 </div>
                                 <div className={styles.inputBox}>

@@ -6,12 +6,14 @@ import { useState } from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
 import Indicator from '../../components/Indicator';
+import Link from 'next/link';
 const NewsFeed = ({ newsInfo }) => {
+  console.log(newsInfo)
   const [comments, setcomments] = useState('')
-  // const news_ref = newsInfo[0].news_ref;
-  // const { data, error, mutate } = useSWR(`http://localhost:5000/comments?news_ref=${news_ref}`, {
-  //   refreshInterval: 1000
-  // })
+  const news_ref = newsInfo[0].news_ref;
+  const { data, error, mutate } = useSWR(`http://localhost:5000/comments?news_ref=${news_ref}`, {
+    refreshInterval: 1000
+  })
   const send = () => {
     const message = comments;
     axios.post("http://localhost:3000/comments", { news_ref, message }).then((res) => {
@@ -29,11 +31,12 @@ const NewsFeed = ({ newsInfo }) => {
     <div className={styles.containerFluid}>
       <section className={styles.section}>
         <header>
-          <a href="/" className={styles.logo}>Blog<span>On</span></a>
+          <Link href="/" className={styles.logo}>Blog<span>On</span></Link>
           <Indicator/>
         </header>
-
-        <CategoryNews />
+       <div className={styles.center}>
+       <CategoryNews newsInfo={newsInfo} />
+       </div>
         <div>
           {/* <input type="text" value={comments} onChange={(e) => setcomments(e.target.value)} />
           <button className="btn" onClick={send}>Send</button>
@@ -45,13 +48,13 @@ const NewsFeed = ({ newsInfo }) => {
 }
 export default NewsFeed
 
-// export async function getServerSideProps(context) {
-//   const { query } = context;
-//   const { desc } = query;
-//   const demo = desc.replace(/ /g, "%20")
-//   let response = await fetch(`http://localhost:5000/posts?description=${demo}`);
-//   let data = await response.json();
-//   return {
-//     props: { newsInfo: data }
-//   }
-// }
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const { desc } = query;
+  const demo = desc.replace(/ /g, "%20")
+  let response = await fetch(`http://localhost:5000/posts?description=${demo}`);
+  let data = await response.json();
+  return {
+    props: { newsInfo: data }
+  }
+}
