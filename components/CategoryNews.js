@@ -15,7 +15,8 @@ const CategoryNews = ({ newsInfo }) => {
                     <div className={styles.box}>
                         <div className={styles.previewBox}>
                             <div className={styles.imageBox}>
-                                <Image src={val.imageUrl} alt="" width={500} height={400} blurDataURL={val.imageUrl} placeholder='blur' />
+                                <img src={val.imageUrl} alt="image"
+                             />
                             </div>
                             <div className={styles.details}>
                                 <span className={styles.title}>

@@ -21,9 +21,34 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "news_ref": "16eb3053-c31f-4817-9c34-9d080c75af7e",
+      "message": "hello",
+      "id": 1
+    },
+    {
+      "news_ref": "16eb3053-c31f-4817-9c34-9d080c75af7e",
+      "message": "hi o",
+      "id": 2
+    },
+    {
+      "news_ref": "a719cb45-cb8c-4cfa-9dc9-dffda63edb7e",
+      "message": "sing",
+      "id": 4
+    },
+    {
+      "news_ref": "a719cb45-cb8c-4cfa-9dc9-dffda63edb7e",
+      "message": "sum",
+      "id": 5
+    },
+    {
+      "news_ref": "a719cb45-cb8c-4cfa-9dc9-dffda63edb7e",
+      "message": "dry",
+      "id": 6
+    },
+    {
+      "news_ref": "a719cb45-cb8c-4cfa-9dc9-dffda63edb7e",
+      "message": "red",
+      "id": 7
     }
   ],
   "profile": {

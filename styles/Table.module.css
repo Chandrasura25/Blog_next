@@ -11,6 +11,15 @@
 	min-height: 100vh;
 	background: url(../assets/images/1.jpg);
 	background-size: cover;
+	animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .section .leftBox{
 	width: 50%;
@@ -109,4 +118,22 @@
 	background: #e91e63;
 	border-color: #e91e63;
 	color: #fff;
+}
+@media (max-width:900px) {
+	.section{
+		display:flex;
+		flex-direction:column;
+		gap:20px;
+		justify-content:center;
+		align-items:center;
+	}
+	.section .events,.section .leftBox{
+		padding:20px;
+		width:100%;
+	}
+}
+@media (max-width:700px) {
+	.section{
+		background:#333;
+	}
 }

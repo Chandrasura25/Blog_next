@@ -71,3 +71,8 @@
   cursor: pointer;
   white-space: nowrap;
 }
+@media (max-width:800px) {
+  .previewBox{
+    max-width:600px;
+  }
+}

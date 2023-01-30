@@ -78,7 +78,7 @@ const NewsPost = () => {
                             </div>
                         </div>
                     </div>
-                    <a href="/newsFeed" className={styles.btns}>News Feed</a>
+                    <a href="/newsTable" className={styles.btns}>News Table</a>
                     <a href="/" className={styles.btns} id="signup">Home</a>
                 </div>
             </div>

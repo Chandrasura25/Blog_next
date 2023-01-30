@@ -1,0 +1,59 @@
+.body h3 {
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  color: #333;
+  font-size: 1.2em;
+}
+.inputBox {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+.mesBx {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  border: 1px solid #888;
+  margin-bottom: 3px;
+}
+.showBx {
+  position: relative;
+  overflow-y: scroll;
+  height: 200px;
+}
+.inputBox input {
+  width: 100%;
+  border: 1px solid #555;
+  color: #111;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+.showBx p {
+    font-size: 1em;
+    color: #999;
+    font-weight: 600;
+    padding: 5px;
+  }
+.body button {
+  font-size: 1em;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.body button:hover {
+  letter-spacing: 3px;
+}

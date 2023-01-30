@@ -2,28 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import styles from '../../styles/NewsFeed.module.css'
 import CategoryNews from '../../components/CategoryNews';
-import { useState } from 'react';
-import axios from 'axios';
-import useSWR from 'swr';
 import Indicator from '../../components/Indicator';
 import Link from 'next/link';
+import Comment from '../../components/Comment';
 const NewsFeed = ({ newsInfo }) => {
-  console.log(newsInfo)
-  const [comments, setcomments] = useState('')
   const news_ref = newsInfo[0].news_ref;
-  const { data, error, mutate } = useSWR(`http://localhost:5000/comments?news_ref=${news_ref}`, {
-    refreshInterval: 1000
-  })
-  const send = () => {
-    const message = comments;
-    axios.post("http://localhost:3000/comments", { news_ref, message }).then((res) => {
-      setcomments('')
-      mutate();
-    })
-  }
-  const delBtn = (delIndex) => {
-    axios.delete(`http://localhost:3000/comments/${delIndex}`)
-  }
   return <>
     <Head>
       <title>News Feed</title>
@@ -37,11 +20,9 @@ const NewsFeed = ({ newsInfo }) => {
        <div className={styles.center}>
        <CategoryNews newsInfo={newsInfo} />
        </div>
-        <div>
-          {/* <input type="text" value={comments} onChange={(e) => setcomments(e.target.value)} />
-          <button className="btn" onClick={send}>Send</button>
-          <button className="btn" onClick={() => delBtn(val.id)}>Del Comment</button> */}
-        </div>
+       <div className={styles.comment}>
+        <Comment news_ref={news_ref} />
+       </div>
       </section>
     </div>
   </>
