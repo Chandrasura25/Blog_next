@@ -6,7 +6,7 @@
 #white p {
   color: #fff;
 }
-.testimonials .content .box {
+.content .box {
   width: 340px;
   height: 350px;
   margin: 15px;
@@ -18,7 +18,7 @@
   align-items: center;
   flex-direction: column;
 }
-.testimonials .content .box .imgBx {
+.content .box .imgBx {
   position: relative;
   width: 80px;
   height: 80px;
@@ -26,19 +26,19 @@
   border-radius: 50%;
   overflow: hidden;
 }
-.testimonials .content .box .text {
+.content .box .text {
   text-align: center;
 }
-.testimonials .content .box .text p {
+.content .box .text p {
   color: #666;
   font-style: italic;
 }
-.testimonials .content .box .text p:nth-child(1) {
+.content .box .text p:nth-child(1) {
   color: #333;
   font-style: normal;
   text-transform: uppercase;
 }
-.testimonials .content .box .text h3 {
+.content .box .text h3 {
   margin-top: 20px;
   color: #ff0157;
   font-size: 1em;
@@ -65,14 +65,14 @@
   align-items: center;
   flex-direction: column;
 }
-.testimonials .content {
+.content {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 40px;
 }
-.testimonials .content .box .imgBx img {
+.content .box .imgBx img {
   position: absolute;
   top: 0;
   left: 0;

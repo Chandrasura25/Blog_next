@@ -18,7 +18,7 @@ const Navbar = () => {
                     <li><a href="/newsTable" onClick={toggleMenu}>News Table</a></li>
                     <li><a href="#testimonial" onClick={toggleMenu}>News</a></li>
                     <li><a href="/newsPost" onClick={toggleMenu}>Post News</a></li>
-                    <li><a href="#" onClick={toggleMenu}>Testimonials</a></li>
+                    <li><a href="latestNews" onClick={toggleMenu}>Latest News</a></li>
                     <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
                 </ul>
             </header>
