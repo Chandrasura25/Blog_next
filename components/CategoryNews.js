@@ -12,11 +12,11 @@ const CategoryNews = ({ newsInfo }) => {
                         <h2 className={styles.titleText}>News <span>C</span>ontent</h2>
                         <p>{val.description}</p>
                     </div>
-                    <div className={styles.box}>
+                    {/* <div className={styles.box}>
                         <div className={styles.previewBox}>
                             <div className={styles.imageBox}>
                                 <img src={val.imageUrl} alt="image"
-                             />
+                                />
                             </div>
                             <div className={styles.details}>
                                 <span className={styles.title}>
@@ -30,6 +30,22 @@ const CategoryNews = ({ newsInfo }) => {
                                 <span className={styles.icon}><i class="fa fa-clock-o" aria-hidden="true"></i><TimeAgo
                                     datetime={val.created_at} /></span>
                             </div>
+                        </div>
+                    </div> */}
+                    <div className={styles.box}>
+                        <div className={styles.figure}>
+                            <img src={val.imageUrl} alt="image" />
+                                <div className={styles.caption}>
+                                    <div className={styles.about}>
+                                        <h2>{val.description}</h2>
+                                        <p> <ReactReadMoreReadLess
+                                        charLimit={200}
+                                        readMoreText={"Read more ▼"}
+                                        readLessText={"Read less ▲"}
+                                    >
+                                        {val.body}</ReactReadMoreReadLess></p>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </section>

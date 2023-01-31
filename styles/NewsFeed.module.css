@@ -34,7 +34,6 @@
   width: 100%;
   left: 0;
   padding: 40px 100px;
-  /* z-index: 3; */
   display: flex;
   justify-content: space-between;
   transition: 0.5s;
@@ -61,10 +60,4 @@
   z-index: 1;
   right: 20px;
   background: #fff;
-}
-
-@media (max-width:800px) {
-  .center {
-    max-width: 400px !important;
-  }
 }

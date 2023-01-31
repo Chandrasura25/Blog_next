@@ -55,6 +55,9 @@ section {
   opacity: 1;
   transform: translateX(0px);
 }
+#navigate.active ~ .section header {
+  z-index: 3;
+}
 #togg.active::before{
   content: 'Close';
 }
