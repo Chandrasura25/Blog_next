@@ -3,7 +3,6 @@ import styles from '../styles/Comment.module.css';
 import { useState } from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
-import { ToastContainer, toast } from 'react-toastify';
 const Comment = ({ news_ref }) => {
     const [comments, setcomments] = useState('')
     const { data, error, mutate } = useSWR(`http://localhost:5000/comments?news_ref=${news_ref}`, {
@@ -18,7 +17,7 @@ const Comment = ({ news_ref }) => {
             })
         }
         else {
-            toast('Please enter the comment input')
+            alert('Please enter the comment input')
         }
     }
     const delBtn = (delIndex) => {
@@ -27,13 +26,12 @@ const Comment = ({ news_ref }) => {
     return (
         <>
             <div className={styles.body}>
-                <h3>Comment Section</h3>
-                {/* <ToastContainer /> */}
+                <h3>Comment Section <button>{data?.length}</button></h3>
                 <div className={styles.showBx}>
                     {data?.map((val, i) => (
                         <div className={styles.mesBx}>
                             <p>{val.message}</p>
-                            <button onClick={() => delBtn(val.id)}>Delete</button>
+                            <button onClick={() => delBtn(val.id)}>Del</button>
                         </div>
                     ))}
                 </div>

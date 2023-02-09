@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>BlogOn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
       <Banner />
@@ -18,9 +19,4 @@ export default function Home() {
       <Footer />
     </>
   )
-}
-Home.getLayout = function PageLayout(page){
-  return <>
-  {page}
-  </>
 }
